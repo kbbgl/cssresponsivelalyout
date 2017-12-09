@@ -1,0 +1,60 @@
+<html>
+
+    <style>
+    
+    .wrapper{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(2, 250px);
+    }
+
+    .wrapper > div > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cell_layout > div{
+        color: #fff;
+        text-align: center;
+        display: table-cell;
+        border: 3px solid grey;
+        margin: 3px;
+        background: #000;
+        vertical-align: middle;
+        font-size: 25px;
+    }
+
+    h1{
+        color: #fff;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    body{
+        background: #000;
+    }
+
+    </style>
+
+    <h1>CSS Responsive Grids</h1>
+    <div class="wrapper cell_layout">
+        <div id="one" ><img src="http://cdn.newsapi.com.au/image/v1/6cfebf4ef16049f9b50e2edc9af4abaf"></div>
+        <div id="two" ><img src="https://media.wired.com/photos/59268c5eaf95806129f4fd26/master/w_1280,c_limit/SPoW_001.jpg"></div>
+        <div id="three"><img src="http://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/09/15/family-mountain-vacation-lake-louise.jpg.rend.hgtvcom.966.725.suffix/1491581263346.jpeg"></div>
+        <div id="four"><img src="http://17721-presscdn-0-33.pagely.netdna-cdn.com/wp-content/uploads/2012/06/Norwegian-Fjordlands.jpeg" alt=""></div>
+        <div id="five"><img src="https://areyouhavingabubble.files.wordpress.com/2015/04/desert-2.jpg"></div>
+        <div id="six"> <img src="http://www.dive-the-world.com/images/gallery/pages/medium/5d28fdb655-easy-divers-diver-at-sail-rock.jpg">  </div>
+    </div>
+    <script> 
+            var colors = ["#A52A2A", "#6495ED", "#BDB76B", "#8FBC8F", "#FF1493", "#00BFFF"];
+            console.debug(Math.floor(Math.random * colors*length));
+            var random_color = colors[2];
+            document.getElementById('one').style.background = colors[0];
+            document.getElementById("two").style.background = colors[1];
+            document.getElementById("three").style.background = colors[2];
+            document.getElementById("four").style.background = colors[3];
+            document.getElementById("five").style.background = colors[4];
+    </script>
+</html>
